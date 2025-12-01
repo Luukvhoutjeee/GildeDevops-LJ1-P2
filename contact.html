@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Formulier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="contact-body">
+    <nav>
+        <div class="contact-navigatie">
+        <a href="Index.html">Home</a>
+        <a href="Luuk.html">Luuk</a>
+        <a href="Lucas.html">Lucas</a>
+        <a href="abel.html">Abel</a>
+        <a href="loic.html">Loic</a>
+        <a href="https://www.gildeopleidingen.nl/" target="_blank">Gildeopleidingen.nl</a>
+    </div>
+    <h1 class="contact-h1">Contactformulier</h1>
+    </nav>
+
+    <form action="#" method="post">
+        <label for="name">Naam:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="type">Categorie:</label><br>
+        <select id="type" name="type" required>
+            <option value="">Kies een categorie</option>
+            <option value="Algemeen">Algemene vraag</option>
+            <option value="Info">Informatie aanvraag</option>
+            <option value="Klacht">Klacht</option>
+        </select><br><br>
+
+        <label for="message">Bericht:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Verstuur</button>
+    </form>
+</body>
+
+</html>
