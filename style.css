@@ -9,38 +9,43 @@
     /* standaard nette lettertypes */
 }
 
+.index-header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00365E;
+    /* donkere blauwe balk */
+    border-radius: 20px;
+    /* afgeronde hoeken */
+    padding: 30px;
+    /* ruimte binnen de balk */
+    width: 90%;
+    /* breedte aanpassen aan de rest */
+    margin: 20px auto;
+    /* centreren */
+}
+
 .index-h1 {
-    text-decoration: none;
-    /* geen onderlijning */
     text-align: center;
     /* titel in het midden */
     color: white;
     /* witte letters */
-    background-color: #00365E;
-    /* donkere blauwe balk */
-    height: auto;
-    /* automatische hoogte */
-    margin-top: 0px;
-    /* geen marge bovenaan */
-    padding: 80px;
-    /* ruimte binnen de balk */
-    border-radius: 20px;
-    /* afgeronde hoeken */
     font-size: 60px;
     /* grote titeltekst */
+    margin: 0;
+    /* geen marge */
 }
 
 .index-DevOpslogo {
-    text-decoration: none;
-    /* geen onderlijning */
-    position: absolute;
-    /* absoluut gepositioneerd */
-    right: 25px;
-    /* 25px van de rechterkant */
-    top: -50px;
-    /* 50px boven de normale positie */
-    width: 25%;
-    /* breedte 25 procent */
+    width: 230px;
+    /* vaste breedte voor het logo */
+    height: auto;
+}
+
+.index-navbar-head {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
 }
 
 .index-article {
@@ -56,7 +61,8 @@
     /* ondermarge 40px */
 }
 
-.index, a{
+.index,
+a {
     text-decoration: none;
     /* geen onderlijning */
     color: white;
@@ -103,10 +109,10 @@
     /* flexbox layout */
     justify-content: center;
     /* inhoud in het midden */
-    align-items: flex-start;
-    /* bovenaan uitlijnen */
-    flex-direction: row;
-    /* elementen naast elkaar */
+    align-items: center;
+    /* horizontaal centreren */
+    flex-direction: column;
+    /* elementen onder elkaar */
     height: auto;
     /* automatische hoogte */
     padding: 23px 0px;
@@ -117,59 +123,64 @@
     /* afgeronde hoeken */
     margin: 20px auto;
     /* marge boven/onder 20px, horizontaal automatisch */
-    width: 90%;
+    width: 92%;
     /* breedte 90% */
     margin-bottom: 40px;
     /* ondermarge 40px */
+    color: white;
+    /* witte tekst */
+    font-size: 30px;
+    /* lettergrootte titel */
 }
+
+.index-navbar-p {
+    font-weight: bold;
+}
+
+.index-navbar-p:hover {
+    color: white;
+    /* tekst wordt roze bij hover */
+}
+
 
 .index-navbar ul {
     list-style-type: none;
-    /* geen opsommingstekens */
     display: flex;
-    /* flexbox layout */
-    justify-content: flex-start;
-    /* links uitlijnen */
-    align-items: center;
-    /* verticaal centreren */
-    flex-direction: row;
-    /* naast elkaar */
-    padding: 0;
-    /* geen padding */
+    justify-content: center;
+    /* Centreert de items */
+    flex-wrap: wrap;
+    /* Laat items naar de volgende regel gaan indien nodig */
     margin: 0;
-    /* geen marge */
     width: 100%;
-    /* volledige breedte */
-    gap: 90px;
-    /* ruimte tussen items */
-    padding-left: 7%;
-    /* padding links 7% */
+    gap: 20px;
+    /* Een kleinere, flexibele tussenruimte */
 }
 
 .index-navbar li {
     font-size: 21px;
-    /* lettergrootte 21px */
     text-align: center;
-    /* tekst gecentreerd */
+    flex: 1 1 200px;
+    /* Laat items groeien en krimpen, met een basis van 200px */
+    max-width: 250px;
+    /* Voorkom dat ze op hele grote schermen te breed worden */
 }
+
 
 .index-navbar li img {
     display: block;
-    /* afbeelding als blok */
     margin: 10px auto 0;
-    /* marge boven 10px, horizontaal gecentreerd */
-    width: 220px;
-    /* vaste breedte */
-    /* fixed width */
-    height: 220px;
-    /* vaste hoogte */
-    /* fixed height so all images match visually */
+    width: 100%;
+    /* Maakt de foto schaalbaar */
+    max-width: 220px;
+    /* Maximale breedte op desktop */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* Houdt de foto's altijd netjes vierkant */
     border-radius: 8px;
-    /* afgeronde hoeken */
     object-fit: cover;
-    /* afbeelding vullen en bijsnijden */
-    /* crops images to same shape regardless of file size */
+    align-items: center;
 }
+
 
 .index-navbar li img:hover {
     transform: scale(1.05);
@@ -266,8 +277,6 @@ footer .index-footer-contact {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* standaard nette lettertypes */
 }
-
-
 
 .contact-header {
     background-color: #00365E;
@@ -380,7 +389,7 @@ button {
 
 #luuk-body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #DD0069;
+    background-color: #003399;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -424,7 +433,7 @@ button {
 
 .luuk-main-container {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
@@ -433,7 +442,7 @@ button {
 
 .luuk-welkom {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .luuk-welkom h1 {
@@ -460,11 +469,11 @@ button {
 
 .luuk-navbar a {
     text-decoration: none;
-    color: #00365E;
+    color: #003399;
 }
 
 .luuk-navbar a:hover .luuk-h3 {
-    color: #e0006d;
+    color: #e00000;
     transform: scale(1.05);
 }
 
@@ -484,9 +493,9 @@ button {
     gap: 50px;
 }
 
-.luuk-p{
+.luuk-p {
     font-size: larger;
-    color: #00365E;
+    color: black;
 }
 
 .luuk-profile-info {
@@ -504,7 +513,7 @@ button {
 }
 
 .luuk-h2 {
-    color: #e0006d;
+    color: #e00000;
     margin-top: 0;
     font-size: 28px;
 }
@@ -569,8 +578,8 @@ button {
 }
 
 .luuk-footer h3 {
-    color: #e0006d;
-    border-bottom: 2px solid #e0006d;
+    color: #e00000;
+    border-bottom: 2px solid #e00000;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -721,13 +730,11 @@ button {
     margin: 0;
     padding: 0;
     color: black;
-    /* zwarte tekst */
-    background-color: white;
-    /* witte achtergrond */
-    background-image: url(Background/pexels-padrinan-255379.jpg);
-    /* achtergrondafbeelding */
+
+    background-image: url(Background/gradient-abstract-wireframe-background_23-2149009903.avif);
+
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* standaard nette lettertypes */    
+
 }
 
 .abel-header {
@@ -765,51 +772,115 @@ button {
     color: #e0006d;
 }
 
-#abel-h1 {
-    color: rgb(255, 0, 0);
-    /* rode tekst */
-    text-align: center;
-    /* tekst gecentreerd */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    font-family: Arial, sans-serif;
 }
+
+
+.profile-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+
+#abel-h1 {
+    color: #d32f2f;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(82, 201, 210);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#abel-h1 .subtitle {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
 
 #abel-h2 {
-    position: relative;
-    /* relatief gepositioneerd */
-    text-align: center;
-    /* tekst gecentreerd */
-    padding-top: 20px;
-    /* bovenpadding 20px */
-    padding-bottom: 20px;
-    /* onderpadding 20px */
-    margin-top: 80px;
-    /* bovenmarge 80px */
-    left: 628px;
-    /* 628px van links */
-    border: 5px dashed green;
-    /* groene stippellijn 5px */
-    color: chocolate;
-    /* bruine tekst */
-    width: 200px;
-    /* breedte 200px */
+    color: #8b4513;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    border: 2px dashed #8b4513;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 20px;
 }
 
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgb(82, 201, 210);
+    margin-top: 20px;
+}
+
+
 .abel-info {
-    position: relative;
-    /* relatief gepositioneerd */
-    left: 500px;
-    /* 500px van links */
-    padding-top: 35px;
-    /* bovenpadding 35px */
-    padding-bottom: 35px;
-    /* onderpadding 35px */
-    margin-top: 40px;
-    /* bovenmarge 40px */
-    border: 5px dashed green;
-    /* groene stippellijn 5px */
-    margin-right: 1000px;
-    /* rechtermarge 1000px */
-    color: chocolate;
-    /* bruine tekst */
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+    color: #333;
+    line-height: 1.6;
+}
+
+.abel-info li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.abel-info .label {
+    font-weight: bold;
+    color: #8b4513;
+    margin-right: 5px;
+}
+
+
+.ol-info {
+    margin: 5px 0 0 20px;
+    padding-left: 15px;
+    color: #555;
+}
+
+.ol-info li {
+    background: none;
+    box-shadow: none;
+    padding: 2px 0;
+    margin-bottom: 2px;
+}
+
+
+.abel-info a {
+    color: rgb(82, 201, 210);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.abel-info a:hover {
+    text-decoration: underline;
 }
 
 html {
@@ -861,6 +932,7 @@ html {
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s;
+
 }
 
 .loic-navigatie a:hover {
@@ -870,7 +942,7 @@ html {
 .loic-navbar a {
     text-decoration: none;
     /* geen onderlijning */
-    color: #ffffff;
+    color: #00000000;
     /* witte tekst */
     font-weight: bold;
     /* dikke letters */
@@ -883,12 +955,15 @@ html {
     /* inhoud centreren */
     align-items: center;
     /* verticaal centreren */
+    background-image: url(Background/back5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .loic-quadrado {
-    background-color: rgba(255, 255, 255, 0.616);
+    background-color: rgba(255, 255, 255, 0.525);
     /* witte transparante achtergrond */
-    width: 1000px;
+    width: 75%;
     /* breedte 1000px */
     height: 876px;
     /* hoogte 876px */
@@ -928,7 +1003,7 @@ html {
 .loic-quadrado_pequeno_dentro {
     position: relative;
     /* relatief gepositioneerd */
-    background-color: rgba(0, 0, 0, 0.225);
+    background-color: rgba(0, 0, 0, 0);
     /* zwarte transparante achtergrond */
     height: 481px;
     /* hoogte 481px */
@@ -978,8 +1053,56 @@ html {
     /* komt iets omhoog */
 }
 
-@media (max-width: 600px) {
-    .index, section{
+
+@media (max-width: 767px) {
+
+    .index-navbar {
+        width: 95%;
+        /* Iets breder voor meer ruimte op mobiel */
+        margin: 10px auto;
+        /* Netjes centreren */
+        padding: 20px 0;
+    }
+
+    .index-navbar ul {
+        display: flex;
+        flex-direction: row;
+        /* Items naast elkaar houden */
+        flex-wrap: wrap;
+        /* Items naar de volgende regel laten springen als het niet past */
+        justify-content: center;
+        /* Zorg dat de items in het midden staan */
+        gap: 20px;
+        /* Veel kleinere tussenruimte dan de 110px van desktop */
+        width: 100%;
+    }
+
+    .index-navbar li {
+        flex: 0 1 150px;
+        /* Geef de items een basisbreedte */
+        margin: 0;
+        padding: 0;
+    }
+
+    .index-navbar li img {
+        display: flex;
+        margin: 10px auto 0;
+        width: 100%;
+        /* Maakt de foto schaalbaar */
+        max-width: 220px;
+        /* Maximale breedte op desktop */
+        height: auto;
+        aspect-ratio: 1 / 1;
+        /* Houdt de foto's altijd netjes vierkant */
+        border-radius: 8px;
+        object-fit: cover;
+        align-items: center;
+    }
+
+
+
+    .index,
+    section {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -991,6 +1114,11 @@ html {
         /* Zorgt dat padding binnen de breedte valt */
     }
 
+    .index,
+    a {
+        font-size: larger;
+    }
+
     .index-h1 {
         font-size: 40px;
         /* Kleinere tekst voor mobiel */
@@ -1000,13 +1128,185 @@ html {
         /* Past netjes op het scherm */
     }
 
-    .index-navbar ul {
-        flex-direction: column;
-        /* items onder elkaar */
-        padding-left: 0;
-        /* padding resetten voor centreren */
-        gap: 30px;
-        /* minder ruimte tussen de items */
+    .index-navbar-head {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: 35px
+    }
 
+    .index-navbar-p {
+        font-size: 25px;
+    }
+
+    .index-footer-links {
+        font-size: 20px;
+    }
+
+    .index-footer-links a {
+        margin-bottom: 17px;
+    }
+
+    .index-footer-links p {
+        font-size: 18px;
+    }
+
+    .index-footer-contact {
+        font-size: 17px;
+    }
+
+    .luuk-navigatie a {
+        font-size: 20px;
+    }
+
+    .abel-header {
+        width: 95%;
+        /* Iets breder voor meer ruimte op mobiel */
+        margin: 0;
+        /* Netjes centreren */
+
+    }
+
+
+    .loic-flexgrid {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .loic-quadrado {
+        width: 100%;
+        height: auto;
+        /* Verwijder de vaste hoogte */
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loic-morgan {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .loic-quadrado_grande_dentro {
+        position: static;
+        /* Haalt de absolute positionering/transform weg */
+        transform: none;
+        width: 90%;
+        height: auto;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .loic-quadrado_grande_dentro ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    .loic-quadrado_pequeno_dentro {
+        position: static;
+        transform: none;
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .loic-dogo {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .index-navbar {
+        width: 95%;
+        /* Iets breder voor meer ruimte op mobiel */
+        margin: 10px auto;
+        /* Netjes centreren */
+        padding: 20px 0;
+    }
+
+    .index-navbar ul {
+        display: flex;
+        flex-direction: row;
+        /* Items naast elkaar houden */
+        flex-wrap: wrap;
+        /* Items naar de volgende regel laten springen als het niet past */
+        justify-content: center;
+        /* Zorg dat de items in het midden staan */
+        gap: 20px;
+        /* Veel kleinere tussenruimte dan de 110px van desktop */
+        width: 100%;
+    }
+
+    .index-navbar li {
+        flex: 0 1 150px;
+        /* Geef de items een basisbreedte */
+        margin: 0;
+        padding: 0;
+    }
+
+    .index-navbar li img {
+        display: flex;
+        margin: 10px auto 0;
+        width: 100%;
+        /* Maakt de foto schaalbaar */
+        max-width: 220px;
+        /* Maximale breedte op desktop */
+        height: auto;
+        aspect-ratio: 1 / 1;
+        /* Houdt de foto's altijd netjes vierkant */
+        border-radius: 8px;
+        object-fit: cover;
+        align-items: center;
+    }
+
+    .loic-quadrado {
+        width: 90%;
+        height: auto;
+        /* Laat het vak meegroeien met de inhoud */
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        /* Stapel de elementen logisch onder elkaar */
+        align-items: center;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .loic-morgan {
+        margin: 0 auto 20px auto;
+        width: 250px;
+        height: auto;
+    }
+
+    .loic-quadrado_grande_dentro {
+        position: static;
+        /* Zet de relative positionering uit */
+        transform: none;
+        /* Verwijder de verschuiving die de tekst buiten beeld drukt */
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        /* Iets kleinere tekst voor betere fit op tablet */
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .loic-quadrado_pequeno_dentro {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .loic-dogo {
+        transform: none;
+        width: 250px;
+        height: auto;
     }
 }
